@@ -136,7 +136,7 @@ sleep 0.2
 widths=$(stty size | awk '{print $2}')  # Get terminal width
 width=$(tput cols)
 var=$((width - 1))
-var2=$(seq -s― ${var} | tr -d '[:digit:]')
+var2=$(seq -s━ ${var} | tr -d '[:digit:]')
 var3=$(seq -s\  ${var} | tr -d '[:digit:]')
 var4=$((width - 25))
 
@@ -150,11 +150,12 @@ HIDECURSOR
 load
 clear
 echo -e "${TERMINAL}${r}●${y}●${b}●${n}        ${data}${c}"
-echo "⌜${var2}⌝"
+
+echo "┏${var2}┓"
 for ((i=1; i<=8; i++)); do
-    echo "⎸${var3}⎹"
+    echo "┃${var3}┃"
 done
-echo "⌞${var2}⌟"
+echo "┗${var2}┛"
 PUT 4 0
 figlet -c -f ASCII-Shadow -w $width SIMU | lolcat
 PUT 3 0
