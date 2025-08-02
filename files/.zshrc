@@ -85,7 +85,7 @@ banner
 
 cd $HOME
 D1=".termux"
-VERSION="$D1/dx.txt"
+VERSION="ULTRA-PRO-MAX"
 if [ -f "$VERSION" ]; then
     version=$(cat "$VERSION")
 else
@@ -106,7 +106,7 @@ echo
 }
 udp() {
     clear
-    messages=$(curl -s "$LUCKYX/check_version" | jq -r --arg vs "$version" '.[] | select(.message == $vs) | .message')
+    messages=$(curl -s "$TIGERS/check_version" | jq -r --arg vs "$version" '.[] | select(.message == $vs) | .message')
 
 # Check if any messages were found and display them
 if [ -n "$messages" ]; then
