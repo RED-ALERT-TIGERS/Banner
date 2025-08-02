@@ -93,7 +93,7 @@ echo
 
 pip install lolcat >/dev/null 2>&1
 rm -rf data/data/com.termux/files/usr/bin/chat >/dev/null 2>&1
-mv $HOME/LUCKYX/files/chat.sh /data/data/com.termux/files/usr/bin/chat
+mv $HOME/Banner/files/chat.sh /data/data/com.termux/files/usr/bin/chat
 chmod +x /data/data/com.termux/files/usr/bin/chat
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh >/dev/null 2>&1
 rm -rf /data/data/com.termux/files/usr/etc/motd
@@ -112,17 +112,17 @@ simu="$ds/colors.properties"
 if [ -f "$dx" ]; then
     echo
 else
-	cp $HOME/LUCKYX/files/font.ttf "$ds"
+	cp $HOME/Banner/files/font.ttf "$ds"
 fi
 
 if [ -f "$simu" ]; then
     echo
 else 
         
-	cp $HOME/LUCKYX/files/colors.properties "$ds"
+	cp $HOME/Banner/files/colors.properties "$ds"
 fi
-cp $HOME/LUCKYX/files/ASCII-Shadow.flf $PREFIX/share/figlet/
-mv $HOME/LUCKYX/files/remove /data/data/com.termux/files/usr/bin/
+cp $HOME/Banner/files/ASCII-Shadow.flf $PREFIX/share/figlet/
+mv $HOME/Banner/files/remove /data/data/com.termux/files/usr/bin/
 chmod +x /data/data/com.termux/files/usr/bin/remove
 termux-reload-settings
 }
@@ -165,12 +165,12 @@ read -p "[+]──[Enter Your Name]────► " name
 echo
     
     # Specify the input and output file names
-    INPUT_FILE="$HOME/LUCKYX/files/.zshrc"
+    INPUT_FILE="$HOME/Banner/files/.zshrc"
     # Temporary file for output
 
     # Use sed to replace SIMU with the name and save to a temporary file
     sed "s/SIMU/$name/g" "$INPUT_FILE" > "$HOME/.zshrc"
-    sed "s/SIMU/$name/g" "$HOME/LUCKYX/files/.luckyx.zsh-theme" > "$HOME/.oh-my-zsh/themes/luckyx.zsh-theme"
+    sed "s/SIMU/$name/g" "$HOME/Banner/files/.luckyx.zsh-theme" > "$HOME/.oh-my-zsh/themes/luckyx.zsh-theme"
 
     # Check if sed was successful
     if [[ $? -eq 0 ]]; then
@@ -195,7 +195,7 @@ echo
     
 D1="$HOME/.termux"
 VERSION="$D1/dx.txt"
-    echo "version 1 1.5" > "$VERSION"
+    echo "version ULTRA-PRO-MAX" > "$VERSION"
 echo
 clear
 }
@@ -204,7 +204,7 @@ banner() {
 echo
 echo
 echo -e "   ${y} ██╗        ██╗      ██╗   ██████╗  ██╗     ██╗  ██╗        ██╗"
-echo -e "   ${y} ██║        ██║      ██║   ██╔═══╝  ██║   ██╔LUC██╗    ██╔╝"
+echo -e "   ${y} ██║        ██║      ██║   ██╔═══╝  ██║   ██╔╝    ╚██╗    ██╔╝"
 echo -e "   ${y} ██║        ██║      ██║   ██║       █████╔╝         ╚████╔╝"
 echo -e "   ${c} ██║        ██║      ██║   ██║       ██╔═██╗          ╚██╔╝"
 echo -e "   ${c} ███████╗    ╚██████╔╝     ██████╗  ██║   ██╗         ██║"
@@ -232,7 +232,7 @@ if [ -d "/data/data/com.termux/files/usr/" ]; then
     echo -e " ${lm}"
     termux
     # dx check if D1DOS folder exists
-    if [ -d "$HOME/LUCKYX" ]; then
+    if [ -d "$HOME/Banner" ]; then
         sleep 2
 	clear
 	banner
@@ -251,7 +251,7 @@ if [ -d "/data/data/com.termux/files/usr/" ]; then
 	echo
 	sleep 3
 	cd "$HOME"
-	rm -rf LUCKYX
+	rm -rf Banner
 	exit 0
 	    else
         clear
