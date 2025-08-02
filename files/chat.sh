@@ -25,7 +25,7 @@ dm='\033[1;93m▱▱▱▱▱▱\033[1;0m〄\033[1;93m▱▱▱▱▱▱\033[1;0
 
 
 URL="https://codex-banner-chat.glitch.me"
-USERNAME_DIR="$HOME/.TIGERS"
+USERNAME_DIR="$HOME/.LUCKYX"
 USERNAME_FILE="$USERNAME_DIR/usernames.txt"
 random_number=$(( RANDOM % 2 ))
 
