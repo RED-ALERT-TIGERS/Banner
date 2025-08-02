@@ -1,4 +1,4 @@
-ZSH_THEME="tigers"
+ZSH_THEME="luckyx"
 export ZSH=$HOME/.oh-my-zsh
 plugins=(git)
 
@@ -89,7 +89,7 @@ VERSION="$D1/dx.txt"
 if [ -f "$VERSION" ]; then
     version=$(cat "$VERSION")
 else
-    echo "version 1.0.1" > "$VERSION"
+    echo "version ULTRA-PRO-MAX" > "$VERSION"
     version=$(cat "$VERSION")
 fi
 
@@ -106,14 +106,14 @@ echo
 }
 udp() {
     clear
-    messages=$(curl -s "$TIGERS/check_version" | jq -r --arg vs "$version" '.[] | select(.message == $vs) | .message')
+    messages=$(curl -s "$LUCKYX/check_version" | jq -r --arg vs "$version" '.[] | select(.message == $vs) | .message')
 
 # Check if any messages were found and display them
 if [ -n "$messages" ]; then
     banner  # Assuming you have a function named 'banner'
     echo -e " ${A} ${c}Tools Updated ${n}| ${c}New ${g}$messages"
     sleep 3
-    git clone https://github.com/RED-ALERT-TIGERS/Banner &> /dev/null &
+    git clone https://github.com/RED-ALERT-TIGERS/Banner.git &> /dev/null &
     spin
     cd Banner
      bash install.sh
@@ -163,9 +163,9 @@ for ((i=1; i<=7; i++)); do
     echo "║"
 done
 PUT 10 ${var4}
-echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mTIGERS \e[36m 1.0.1\e[0m"
+echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mLUCKYX \e[36m 1.0.1\e[0m"
 PUT 12 0
-ads1=$(curl -s "$TIGERS/ads" | jq -r '.[] | .message')
+ads1=$(curl -s "$LUCKYX/ads" | jq -r '.[] | .message')
 
 # Check if ads1 is empty
 if [ -z "$ads1" ]; then
