@@ -138,7 +138,7 @@ width=$(tput cols)
 var=$((width - 1))
 var2=$(seq -s═ ${var} | tr -d '[:digit:]')
 var3=$(seq -s\  ${var} | tr -d '[:digit:]')
-var4=$((width - 15))
+var4=$((width - 25))
 
 PUT() { echo -en "\033[${1};${2}H"; }
 DRAW() { echo -en "\033%"; echo -en "\033(0"; }
