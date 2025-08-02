@@ -138,7 +138,7 @@ width=$(tput cols)
 var=$((width - 1))
 var2=$(seq -s═ ${var} | tr -d '[:digit:]')
 var3=$(seq -s\  ${var} | tr -d '[:digit:]')
-var4=$((width - 20))
+var4=$((width - 15))
 
 PUT() { echo -en "\033[${1};${2}H"; }
 DRAW() { echo -en "\033%"; echo -en "\033(0"; }
@@ -163,7 +163,7 @@ for ((i=1; i<=7; i++)); do
     echo "║"
 done
 PUT 10 ${var4}
-echo -e "\e[32m[\e[0m\uf489\e[32m]\e[36mVERSION\e[36mULTRA-PRO-MAX\e[0m"
+echo -e "\e[32m[\e[0m\uf489\e[32m]\e[36mVERSION \e[36mULTRA-PRO-MAX\e[0m"
 PUT 12 0
 ads1=$(curl -s "$TIGERS/ads" | jq -r '.[] | .message')
 
