@@ -163,9 +163,9 @@ for ((i=1; i<=7; i++)); do
     echo "║"
 done
 PUT 10 ${var4}
-echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mLUCKYX \e[36m 1.0.1\e[0m"
+echo -e "\e[32m[\e[0m\uf489\e[32m] \e[36mTIGERS \e[36m ULTRA-PRO-MAX\e[0m"
 PUT 12 0
-ads1=$(curl -s "$LUCKYX/ads" | jq -r '.[] | .message')
+ads1=$(curl -s "$TIGERS/ads" | jq -r '.[] | .message')
 
 # Check if ads1 is empty
 if [ -z "$ads1" ]; then
